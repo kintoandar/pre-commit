@@ -34,7 +34,7 @@ Step into the repo you want to have the pre-commit hooks installed and run:
 ```shell
 cat <<EOF > .pre-commit-config.yaml
 - repo: git://github.com/kintoandar/pre-commit.git
-  sha: v0.0.1
+  sha: v0.0.2
   hooks:
   - id: terraform_fmt
   - id: terraform_validate
