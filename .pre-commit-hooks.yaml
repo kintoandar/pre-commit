@@ -4,6 +4,7 @@
   entry: bin/tf_fmt.sh
   language: script
   files: \.tf$
+  exclude: \.terraform\/.*$
 
 - id: terraform_validate
   name: terraform_validate
@@ -11,3 +12,4 @@
   entry: bin/tf_validate.sh
   language: script
   files: \.tf$
+  exclude: \.terraform\/.*$
