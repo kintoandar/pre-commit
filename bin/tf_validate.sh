@@ -10,5 +10,7 @@ for file_with_path in "$@"; do
 done
 
 for path_uniq in $(echo "${paths[*]}" | tr ' ' '\n' | sort -u); do
-  terraform validate "$path_uniq"
+  pushd $path_uniq
+  terraform validate
+  popd
 done
