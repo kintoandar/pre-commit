@@ -13,8 +13,10 @@ Table of Contents
 Collection of pre-commit hooks to be used with [Yelp's](http://pre-commit.com/) pre-commit framework
 
 ## Available Hooks
-  * Terraform Format
-  * Terraform Validate
+  * Terraform format
+  * Terraform validate
+  * Prometheus rules validation
+  * Prometheus configuration validation
 
 Check the [hooks manifest](https://github.com/kintoandar/pre-commit/blob/master/.pre-commit-hooks.yaml) to know more
 
@@ -34,10 +36,12 @@ Step into the repo you want to have the pre-commit hooks installed and run:
 ```shell
 cat <<EOF > .pre-commit-config.yaml
 - repo: git://github.com/kintoandar/pre-commit.git
-  sha: v2.0.0
+  sha: v2.1.0
   hooks:
   - id: terraform_fmt
   - id: terraform_validate
+  - id: prometheus_check_rules
+  - id: prometheus_check_config
 EOF
 ```
 

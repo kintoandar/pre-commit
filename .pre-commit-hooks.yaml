@@ -13,3 +13,17 @@
   language: script
   files: \.tf$
   exclude: \.terraform\/.*$
+
+- id: prometheus_check_rules
+  name: prometheus_check_rules
+  description: Validates prometheus rules
+  entry: bin/prom_rules.sh
+  language: script
+  files: \.rules$
+
+- id: prometheus_check_config
+  name: prometheus_check_config
+  description: Validates prometheus configuration
+  entry: bin/prom_config.sh
+  language: script
+  files: prometheus.yml$
