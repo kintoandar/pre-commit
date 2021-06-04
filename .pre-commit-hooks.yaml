@@ -3,7 +3,8 @@
   description: Formats terraform scripts into the correct checkstyle
   entry: bin/tf_fmt.sh
   language: script
-  files: \.tf$
+  types:
+    - terraform
   exclude: \.terraform\/.*$
 
 - id: terraform_validate
@@ -11,7 +12,8 @@
   description: Validates terraform scripts syntax
   entry: bin/tf_validate.sh
   language: script
-  files: \.tf$
+  types:
+    - terraform
   exclude: \.terraform\/.*$
 
 - id: prometheus_check_rules
